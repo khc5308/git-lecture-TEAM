@@ -4,8 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page1</title>
+    <style>
+        .container .hero #Intro{
+            color: blueviolet;
+            -webkit-text-stroke: 1px white;
+        }
+        u{
+            color: blueviolet;
+            -webkit-text-stroke: 0.2px white;
+        }
+        /* 글꼴 설정 */
+ @font-face {
+    font-family: abster;
+    src: url(font/abster-webfont.woff) format('woff');
+} 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* container는 배경을 의미 */
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/soshite_para.png) no-repeat center;
+    background-size: cover;
+}
+
+/* header 영역은 화면 상단의 Design 로고글자와 메뉴바를 포함한다.  */
+.container .header{
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* 자식 요소에 대한 배치 방법을 ... */
+}
+
+/* 화면 왼쪽 상단 글자 로고 스타일 */
+.container .header h1 a{
+    text-decoration: none;
+    color: blueviolet;
+    font-family: rubik;
+    -webkit-text-stroke: 1px white;
+}
+
+/* 메뉴요소에 대한 스타일링(배치) */
+.container .nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+/* 메뉴요소에 대한 스타일링(글꼴) */
+.container .nav ul li a{
+    text-decoration: none;
+    color: rgb(177, 123, 227);
+}
+/* 메뉴요소에 대한 스타일링(마우스이벤트_글자색 변경) */
+.container .nav ul li a:hover{
+    text-decoration: none;
+    color: blueviolet; 
+}
+
+ .container .hero{ 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+} 
+
+.container .hero h2{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.container .hero p{
+    font-size: 22px;
+}
+
+.container .hero button{
+    background: none;
+    border : 2px solid darkseagreen;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    outline: none;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.container .hero button:hover{
+    background-color: blueviolet;
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>page 1</h1>
-</body>
+    <div class="container">
+        <div class="header">
+          <h1><a href="#">DAE-PARA</a></h1>
+          <div class="nav">
+            <ul>
+              <li><a href="#">SOSHITE...</a></li>
+              <li><a href="#">PROJECT!</a></li>
+              <li><a href="#">ACHEVEMENT!</a></li>
+              <li><a href="#">RESEARCH!</a></li>
+              <li><a href="#">AI!</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="hero">
+          <h2 id="Intro">그저 G.O.A.T</h2>
+          <p>
+            명실상부 최고의 동아리이자 그 누구도 범접할 수 없는 기술을 다루는 동아리<br />
+            최고중 최고의 동아리, <u>PARA</u>의 소개를 보려면 아래 버튼을 눌러주세요
+          </p>
+          <button type="button" onclick="location.href='https:sunrin-para.dev/#apply' " style="border-color: blueviolet;">드가자</button>
+        </div>
+      </div>
+</body> 
 </html>
